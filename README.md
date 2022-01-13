@@ -10,8 +10,8 @@ Assuming you have Python installed on your computer. Open a terminal and navigat
 
 - `pip install turtle`
 - `pip install random2`
-- `python app.py`
 
-This will make the game run.
+Now run `python app.py` on terminal. This will make the game run.
+Alternatively, you can double click on the `autorun.bat` file to run it.
 
 #### [Ibne Nahian](https://www.facebook.com/evilprince2009/)
