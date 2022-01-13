@@ -117,8 +117,8 @@ pen.penup()
 
 
 food = turtle.Turtle()
-food.shape("square")
-food.color("black")
+food.shape("circle")
+food.color("red")
 food.shapesize(food_size / 20)
 food.penup()
 
