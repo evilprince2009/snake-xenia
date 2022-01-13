@@ -1,9 +1,9 @@
 import turtle
 import random
 
-w = 500
-h = 500
-food_size = 10
+width = 500
+length = 500
+food_size = 15
 delay = 100
 
 offsets = {
@@ -17,7 +17,7 @@ offsets = {
 def reset():
     global snake, snake_dir, food_position, pen
     snake = [[0, 0], [0, 20], [0, 40], [0, 60], [0, 80]]
-    snake_dir = "up"
+    snake_dir = "right"
     food_position = get_random_food_position()
     food.goto(food_position)
     move_snake()
@@ -38,14 +38,14 @@ def move_snake():
         if not food_collision():
             snake.pop(0)
 
-        if snake[-1][0] > w / 2:
-            snake[-1][0] -= w
-        elif snake[-1][0] < - w / 2:
-            snake[-1][0] += w
-        elif snake[-1][1] > h / 2:
-            snake[-1][1] -= h
-        elif snake[-1][1] < -h / 2:
-            snake[-1][1] += h
+        if snake[-1][0] > width / 2:
+            snake[-1][0] -= width
+        elif snake[-1][0] < - width / 2:
+            snake[-1][0] += width
+        elif snake[-1][1] > length / 2:
+            snake[-1][1] -= length
+        elif snake[-1][1] < -length / 2:
+            snake[-1][1] += length
 
         pen.clearstamps()
 
@@ -68,8 +68,8 @@ def food_collision():
 
 
 def get_random_food_position():
-    x = random.randint(- w / 2 + food_size, w / 2 - food_size)
-    y = random.randint(- h / 2 + food_size, h / 2 - food_size)
+    x = random.randint(- width / 2 + food_size, width / 2 - food_size)
+    y = random.randint(- length / 2 + food_size, length / 2 - food_size)
     return (x, y)
 
 
@@ -105,7 +105,7 @@ def go_left():
 
 
 screen = turtle.Screen()
-screen.setup(w, h)
+screen.setup(width, length)
 screen.title("Snake Xenia")
 screen.bgcolor("white")
 screen.setup(700, 500)
@@ -118,7 +118,7 @@ pen.penup()
 
 food = turtle.Turtle()
 food.shape("square")
-food.color("magenta")
+food.color("black")
 food.shapesize(food_size / 20)
 food.penup()
 
