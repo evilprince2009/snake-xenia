@@ -6,7 +6,7 @@ Simple snake game written in Python
 
 ## How to run
 
-Assuming you have Python installed on your computer. Open a terminal and navigate to the project folder. Now you run the following command:
+Assuming you have Python installed on your computer. Open a terminal and navigate to the project folder. Now you run these following command:
 
 - `pip install turtle`
 - `pip install random2`
